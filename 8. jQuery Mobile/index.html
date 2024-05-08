@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>jQuery Mobile Website</title>
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+    <style>
+        /* Apply custom styles to header */
+        [data-role="header"] {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+        }
+
+        /* Apply custom styles to content */
+        [data-role="content"] {
+            padding: 20px;
+        }
+
+        /* Apply custom styles to footer */
+        [data-role="footer"] {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        /* Apply custom styles to buttons */
+        [data-role="button"] {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            display: block;
+            margin: 10px auto;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        /* Change button color on hover */
+        [data-role="button"]:hover {
+            background-color: #0056b3;
+        }
+
+        /* Apply custom styles to page transitions */
+        .ui-page {
+            background-color: #f8f8f8;
+        }
+
+        /* Apply custom styles to page titles */
+        .ui-title {
+            font-size: 24px;
+            margin: 0;
+        }
+
+        /* Apply custom styles to paragraph text */
+        p {
+            font-size: 16px;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Home Page -->
+    <div data-role="page" id="home">
+        <div data-role="header">
+            <h1>Home Page</h1>
+        </div>
+        <div data-role="content">
+            <p>Welcome to our jQuery Mobile website!</p>
+            <a href="#about" data-role="button">About</a>
+            <a href="#contact" data-role="button">Contact</a>
+        </div>
+        <div data-role="footer">
+            <h4>&copy; 2024 jQuery Mobile Website</h4>
+        </div>
+    </div>
+
+    <!-- About Page -->
+    <div data-role="page" id="about">
+        <div data-role="header">
+            <h1>About Us</h1>
+        </div>
+        <div data-role="content">
+            <p>This is the About Us page.</p>
+            <a href="#home" data-role="button" data-icon="home">Home</a>
+        </div>
+        <div data-role="footer">
+            <h4>&copy; 2024 jQuery Mobile Website</h4>
+        </div>
+    </div>
+
+    <!-- Contact Page -->
+    <div data-role="page" id="contact">
+        <div data-role="header">
+            <h1>Contact Us</h1>
+        </div>
+        <div data-role="content">
+            <p>Contact information goes here.</p>
+            <a href="#home" data-role="button" data-icon="home">Home</a>
+        </div>
+        <div data-role="footer">
+            <h4>&copy; 2024 jQuery Mobile Website</h4>
+        </div>
+    </div>
+
+</body>
+
+</html>
