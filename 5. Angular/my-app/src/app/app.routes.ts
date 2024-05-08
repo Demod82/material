@@ -5,7 +5,7 @@ import { ProfileComponent } from './profile/profile.component';
 
 export const routes: Routes = [
     {
-        path: 'register',
+        path: '',
         component: RegisterComponent,
     },
     {
