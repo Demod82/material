@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration</title>
+</head>
+
+<body>
+
+    <!-- User Registration Form -->
+    <form id="registrationForm">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required><br><br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+        <button type="submit">Register</button>
+    </form>
+
+    <script>
+        document.getElementById("registrationForm").addEventListener("submit", function (event) {
+            event.preventDefault(); // Prevent default form submission
+
+            // Capture form data
+            var username = document.getElementById("username").value;
+            var email = document.getElementById("email").value;
+
+            // Push data to an array or local storage
+            var userData = {
+                username: username,
+                email: email
+            };
+
+            // Simulate AJAX POST request (since you don't want PHP)
+            var xhr = new XMLHttpRequest();
+            xhr.open("GET", "https://reqres.in/api/users?page=2", true);
+            xhr.setRequestHeader("Content-Type", "application/json");
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    localStorage.setItem("userData", JSON.stringify(userData));
+                    var responseData = JSON.parse(xhr.responseText);
+                    console.log("Data received:", responseData);
+                }
+            };
+            xhr.send(JSON.stringify(userData));
+        });
+    </script>
+
+</body>
+
+</html>
